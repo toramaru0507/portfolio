@@ -1,0 +1,88 @@
+// about
+.area_about_home {
+  .container {
+    .body_home {
+      display: flex;
+      width: 1000px;
+      height: 625px;
+      margin: 0 auto;
+
+      .img {
+        width: 600px;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+      }
+
+      .img::after {
+        content: "";
+        position: absolute;
+        top: 70px;
+        left: 100px;
+        width: 500px;
+        height: 500px;
+        background-color: #afeeee;
+        z-index: -1;
+      }
+
+      .text_home {
+        width: 375px;
+        height: 375px;
+        padding: 20px;
+
+        .btn {
+          text-align: center;
+          margin-top: 50px;
+
+          a:hover {
+            color: #FFF;
+            background-color: #191970;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq(sp) {
+  .area_about_home {
+    .container {
+      .body_home {
+        width: 100%;
+        display: block;
+        height: 100%;
+
+        .img {
+          width: 100%;
+          padding: 0px;
+
+          img {
+            width: 80%;
+          }
+        }
+
+        .img::after {
+          content: "";
+          position: absolute;
+          top: 20px;
+          left: 60px;
+          width: 300px;
+          height: 300px;
+          background-color: #afeeee;
+          z-index: -1;
+        }
+
+        .text_home {
+          padding: 50px 30px 30px 30px;
+          width: 80%;
+          height: 80%;
+          margin: 0 auto;
+
+          .text_home_ttl {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

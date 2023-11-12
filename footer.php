@@ -1,5 +1,5 @@
 
-        <!-- Contact Form7 -->  
+        <!-- Contact Form7 -->
         <section id="contact7" class="area_contact_home">
             <div class="container">
                 <div class="head_home fade-in">
@@ -15,7 +15,7 @@
     <footer class="fotter">
         <p>©️2021Toraji Corporation</p>
     </footer>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+    <script src=<?php echo get_template_directory_uri() . '/js/main.js?';echo date("YmdHi"); ?>></script>
     <?php wp_footer(); ?>
 </body>
 </html>

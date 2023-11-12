@@ -1,0 +1,19 @@
+.area_flow_home {
+  .container {
+    .body_home {
+      padding: 0 150px 30px 150px;
+    }
+  }
+}
+
+@include mq(sp) {
+  .area_flow_home {
+    .container {
+      padding: 20px;
+
+      .body_home {
+        padding: 0;
+      }
+    }
+  }
+}

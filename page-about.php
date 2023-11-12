@@ -3,11 +3,11 @@
 Template Name: aboutページ
 */
 ?>
-<?php get_header("1"); ?>
+<?php get_header(); ?>
 <!--Menu-->
 <?php get_template_part('content', 'menu'); ?>
 <!-- fv -->
-<header class="fv">
+<header class="fv-sub">
     <div class="container">
         <h2 class="ttl">Toraji Corporation</h2>
         <img src="<?php echo get_template_directory_uri();?>/img/mylogo.svg" alt="">

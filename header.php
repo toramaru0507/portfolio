@@ -8,9 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <!-- キャッシュの問題が起きないように新しい日付順で出すようにしている。 -->
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/normalize.css">
-  <link rel="stylesheet" href=<?php echo get_stylesheet_directory_uri() . '/css/style.css?';
-                              echo date("YmdHi"); ?>>
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/css/normalize.css">
+  <link rel="stylesheet" href=<?php echo get_stylesheet_directory_uri() . '/dist/css/style.css?';echo date("YmdHi"); ?>>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     $(function() {
