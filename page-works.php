@@ -3,11 +3,11 @@
 Template Name: workページ
 */
 ?>
-<?php get_header("1"); ?>
+<?php get_header(); ?>
 <!--Menu-->
 <?php get_template_part('content', 'menu'); ?>
 <!-- fv -->
-<header class="fv">
+<header class="fv-sub">
     <div class="container">
         <h2 class="ttl">Toraji Corporation</h2>
         <img src="<?php echo get_template_directory_uri();?>/img/mylogo.svg" alt="">
@@ -26,7 +26,7 @@ Template Name: workページ
         );
         $event_query = new WP_Query ($args);
     ?>
-    <section class="area_works_home">
+    <section class="area_page_works_home">
         <div class="container">
             <div class="head_home fade-in">
                 <h2 class="ttl">Works</h2>

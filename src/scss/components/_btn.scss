@@ -1,0 +1,46 @@
+.btn_edge {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0 30px;
+  font-size: 19px;
+  height: 40px;
+  line-height: 40px;
+  background: #afeeee;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  transition: .4s;
+}
+
+.btn_edge:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 10px white;
+  border-bottom: solid 41px transparent;
+  z-index: 1;
+  transition: .1s;
+}
+
+.btn_edge:after {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 10px transparent;
+  border-bottom: solid 41px white;
+  z-index: 1;
+  transition: .1s;
+}
+
+.btn_edge:hover:before,
+.btn_edge:hover:after {
+  border-left-width: 25px;
+}

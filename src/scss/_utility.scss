@@ -1,0 +1,34 @@
+.m-only-pc {
+  display: block;
+}
+
+.m-only-sp {
+  display: none;
+}
+
+@include mq(tab) {
+  .m-only-pc {
+    display: none;
+  }
+  
+  .m-only-sp {
+    display: block;
+  }
+}
+
+.m-flex {
+  display: flex;
+  gap: 1em;
+
+  @include mq(tab) {
+    flex-direction: column;
+  }
+}
+
+.m-flex-align-items-center {
+  align-items: center;
+}
+
+.m-flex-center {
+  justify-content: center;
+}

@@ -1,0 +1,71 @@
+{
+  "name": "toraji",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "precommit": "lint-staged",
+    "stylelint": "stylelint src/scss/**/*.scss --fix",
+    "prettier-format": "prettier --config .prettierrc.js 'src/**/*.js' --write",
+    "eslint": "eslint src/js/**/*.js --fix",
+    "dev": "run-p dev:*",
+    "dev:webpack": "webpack -c webpack.config.common.js -w --mode development",
+
+    "dev:sass": "sass src/scss/style.scss src/css/style.css --no-source-map -w",
+    "dev:postcss": "postcss src/css/style.css -d dist/css/ --base src/css -w",
+    "imageclean": "rimraf dist/img && mkdir dist/img",
+    "imagemin": "node imagemin.mjs",
+    "dev:image": "npm run imageclean && npm run imagemin",
+    "dev:imagewatch": "onchange 'src/img' -e '**/*.DS_Store' -- npm run dev:image",
+    "build": "run-p build:*",
+    "build:css": "sass src/scss/style.scss src/css/style.css --no-source-map -w && postcss src/css/style.css -o dist/css/style.css",
+    "build:webpack": "webpack -c webpack.config.common.js -w --mode production"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "src/**/*.{css,scss}": "stylelint --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toramaru0507/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "browser-sync": "^2.29.3",
+    "css-loader": "^6.8.1",
+    "cssnano": "^6.0.1",
+    "eslint": "^8.53.0",
+    "husky": "^8.0.3",
+    "imagemin": "^8.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-keep-folder": "^5.3.2",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^10.0.1",
+    "lint-staged": "^15.0.2",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "sass": "^1.69.5",
+    "style-loader": "^3.3.3",
+    "stylelint": "^15.11.0",
+    "stylelint-config-recess-order": "^4.3.0",
+    "stylelint-config-standard-scss": "^11.1.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "bugs": {
+    "url": "https://github.com/toramaru0507/portfolio/issues"
+  },
+  "homepage": "https://github.com/toramaru0507/portfolio#readme"
+}

@@ -1,0 +1,58 @@
+// service
+.area_service_home {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .container {
+    .text_home_loop {
+      display: flex;
+      justify-content: space-between;
+
+      .body_home {
+        width: 350px;
+        text-align: center;
+
+        .text_home {
+          .text_home_ttl {
+            padding-top: 20px;
+            margin: 0 auto;
+          }
+
+          .text {
+            width: 350px;
+            margin-top: 20px;
+          }
+        }
+
+        .text_home_ttl::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    .btn {
+      margin-top: 50px;
+      text-align: center;
+
+      a:hover {
+        color: #FFF;
+        background-color: #191970;
+      }
+    }
+  }
+}
+
+@include mq(sp) {
+  .area_service_home {
+    .container {
+      .text_home_loop {
+        display: block;
+
+        .body_home {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

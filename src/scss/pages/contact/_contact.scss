@@ -1,0 +1,90 @@
+// Contact Form7
+.area_contact_home {
+  background-color: #afeeee;
+  margin-top: 50px;
+  height: 1000px;
+
+  .container {
+    .head_home {
+      padding-top: 150px;
+    }
+
+    .body_home {
+      .wpcf7 {
+        .wpcf7-form {
+          .contact7 {
+            height: 680px;
+            width: 50%;
+            background-color: #fff;
+            padding: 30px 30px 0 30px;
+            margin: 0 auto;
+            box-shadow: 4px 4px 12px rgb(62 62 62 / 10%);
+
+            dt {
+              text-align: left;
+              font-size: 18px;
+              margin-top: 10px;
+
+              .must {
+                color: #FF1A00;
+                font-size: 22px;
+              }
+            }
+
+            dd {
+              input {
+                width: 100%;
+                min-height: 30px;
+              }
+
+              textarea {
+                width: 100%;
+              }
+            }
+
+            .btn_contact7 {
+              text-align: center;
+              padding-bottom: 20px;
+
+              input {
+                background: #afeeee;
+                color: #fff;
+                font-size: 20px;
+                border: 1px solid #afeeee;
+                padding: 10px 10px;
+                margin: 20px 0 0 40px;
+              }
+
+              input:hover {
+                background-color: #191970;
+                border: 1px solid #191970;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq(sp) {
+  .area_contact_home {
+    .container {
+      .body_home {
+        .wpcf7 {
+          .wpcf7-form {
+            .contact7 {
+              width: 70%;
+
+              .btn_contact7 {
+                input {
+                  margin: 20px 0 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
