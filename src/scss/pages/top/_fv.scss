@@ -2,33 +2,26 @@
 .fv {
   width: 100%;
 
-  .container {
+  .fv__inner {
     height: 700px;
-    background-color: #afeeee;
+    background-color: $bg-base;
     text-align: center;
+    padding-top: 240px;
 
-    .ttl {
-      padding-top: 200px;
+    .fv__title {
       font-size: 40px;
+      font-family: $font-damion;
       font-style: oblique;
+
+      @include mq(sp) {
+        font-size: 20px;
+      }
     }
 
     img {
-      width: 500px;
-    }
-  }
-}
+      width: 350px;
 
-@include mq(sp) {
-  .fv {
-    .container {
-      height: 500px;
-
-      .ttl {
-        font-size: 20px;
-      }
-
-      img {
+      @include mq(sp) {
         width: 200px;
       }
     }

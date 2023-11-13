@@ -1,11 +1,11 @@
 // Contact Form7
 .area_contact_home {
-  background-color: #afeeee;
+  background-color: $bg-base;
   margin-top: 50px;
   height: 1000px;
 
   .container {
-    .head_home {
+    .heading {
       padding-top: 150px;
     }
 
@@ -47,10 +47,10 @@
               padding-bottom: 20px;
 
               input {
-                background: #afeeee;
+                background: $bg-base;
                 color: #fff;
                 font-size: 20px;
-                border: 1px solid #afeeee;
+                border: 1px solid $bg-base;
                 padding: 10px 10px;
                 margin: 20px 0 0 40px;
               }

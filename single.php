@@ -9,7 +9,7 @@ Template Name: それぞれのworksページ
 <!-- fv -->
 <header class="fv-sub">
     <div class="container">
-        <h2 class="ttl">Toraji Corporation</h2>
+        <h2 class="heading__title">Toraji Corporation</h2>
         <img src="<?php echo get_template_directory_uri();?>/img/mylogo.svg" alt="">
     </div>
 </header>
@@ -19,7 +19,7 @@ Template Name: それぞれのworksページ
 <main class="main">
     <section class="area_worksdetail_home">
         <div class="container">
-            <div class="work_head_home">
+            <div class="work_heading">
                 <h3 class="text_home_ttl"><?php the_title(); ?></h3>
             </div>
             <?php the_content(); ?>

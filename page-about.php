@@ -9,8 +9,8 @@ Template Name: aboutページ
 <!-- fv -->
 <header class="fv-sub">
     <div class="container">
-        <h2 class="ttl">Toraji Corporation</h2>
-        <img src="<?php echo get_template_directory_uri();?>/img/mylogo.svg" alt="">
+        <h2 class="heading__title">Toraji Corporation</h2>
+        <img src="<?php echo get_template_directory_uri();?>/dist/img/mylogo.svg" alt="">
     </div>
 </header>
 <?php breadcrumb(); ?>
@@ -20,8 +20,8 @@ Template Name: aboutページ
     <!-- about -->
     <section class="area_page_about_home">
         <div class="container">
-            <div class="head_home fade-in">
-                <h2 class="ttl">About</h2>
+            <div class="heading fade-in">
+                <h2 class="heading__title">About</h2>
             </div>
             <!-- 黄金比を意識 -->
             <div class="body_home fade-in">
@@ -59,8 +59,8 @@ Template Name: aboutページ
     ?>
     <section class="area_skill_home">
         <div class="container">
-            <div class="head_home fade-in">
-                <h2 class="ttl">Skill</h2>
+            <div class="heading fade-in">
+                <h2 class="heading__title">Skill</h2>
             </div>
             <div class="text_home_loop">
                 <!-- ループ処理 -->

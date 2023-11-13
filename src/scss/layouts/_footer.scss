@@ -1,9 +1,13 @@
 // fotter 
 .fotter {
-  color: #fff;
+  color: $fc-base;
   height: 100px;
-  background-color: #808080;
+  background-color: $bg-base;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mq(sp) {
+    height: 60px;
+  }
 }

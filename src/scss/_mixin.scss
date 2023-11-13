@@ -1,7 +1,7 @@
 // breakpoint
 $breakpoint: (
   sp: 'screen and (max-width: 768px)',
-  tab: 'screen and (min-width: 769px)',
+  tab: 'screen and (max-width: 1366px)',
   pc: 'screen and (min-width: 1366px)',
   header: 'screen and (max-width: 1000px)'
 );
