@@ -1,46 +1,21 @@
 .btn_edge {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   text-decoration: none;
-  padding: 0 30px;
-  font-size: 19px;
-  height: 40px;
-  line-height: 40px;
-  background: #afeeee;
-  font-size: 20px;
-  color: rgb(255, 255, 255);
+  width: 213px;
+  height: 57px;
+  font-size: 1.8rem;
+  border: solid 2px $btn-border;
+  background-color: $bg-white;
+  border-radius: 10px;
+  color: #000;
   transition: .4s;
-}
 
-.btn_edge:before {
-  position: absolute;
-  content: '';
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-  border: none;
-  border-left: solid 10px white;
-  border-bottom: solid 41px transparent;
-  z-index: 1;
-  transition: .1s;
-}
-
-.btn_edge:after {
-  position: absolute;
-  content: '';
-  right: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-  border: none;
-  border-left: solid 10px transparent;
-  border-bottom: solid 41px white;
-  z-index: 1;
-  transition: .1s;
-}
-
-.btn_edge:hover:before,
-.btn_edge:hover:after {
-  border-left-width: 25px;
+  &:hover {
+    color: #FFF;
+    background-color: $fc-base;
+  }
 }

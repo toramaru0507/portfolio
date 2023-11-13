@@ -1,9 +1,9 @@
 .area_worksdetail_home {
   .container {
-    .work_head_home {
+    .work_heading {
       padding: 50px 0 0 100px;
 
-      .text_home_ttl {
+      .heading-sub {
         width: 350px;
       }
     }
@@ -60,7 +60,7 @@
         width: 200px;
         height: 50px;
         color: #fff;
-        background-color: #afeeee;
+        background-color: $bg-base;
         margin: 20px;
         position: relative;
 
@@ -83,7 +83,7 @@
 @include mq(sp) {
   .area_worksdetail_home {
     .container {
-      .work_head_home {
+      .work_heading {
         padding: 20px;
       }
 

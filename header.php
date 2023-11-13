@@ -10,6 +10,9 @@
   <!-- キャッシュの問題が起きないように新しい日付順で出すようにしている。 -->
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/css/normalize.css">
   <link rel="stylesheet" href=<?php echo get_stylesheet_directory_uri() . '/dist/css/style.css?';echo date("YmdHi"); ?>>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     $(function() {

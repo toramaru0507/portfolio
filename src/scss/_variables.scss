@@ -1,11 +1,70 @@
+/* noto-sans-jp-700 - japanese */
+// @font-face {
+//   font-family: 'Damion';
+//   font-style: normal;
+//   font-weight: 700;
+//   font-display: swap;
+//   src: local(''),
+//     url('../fonts/Damion-Regular.woff2') format('woff2'),
+//     // /* Super Modern Browsers */
+//     url('../fonts/Damion-Regular.ttf') format('truetype'),
+//     /* Safari, Android, iOS */
+// }
+
+/* noto-sans-jp-regular - japanese */
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+    url('../fonts/NotoSansCJKjp-Regular.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/NotoSansCJKjp-Regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+}
+
+/* noto-sans-jp-500 - japanese */
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(''),
+    url('../fonts/NotoSansCJKjp-Medium.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/NotoSansCJKjp-Medium.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+}
+
+/* noto-sans-jp-700 - japanese */
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+    url('../fonts/NotoSansCJKjp-Bold.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/NotoSansCJKjp-Bold.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+}
+
+
+$font-damion: 'Damion', cursive;
+$font-notosans: 'Noto Sans JP';
+
 // 太さ
 $fw-bold: 600;
 
 // 色
 $fc-white: #fff;
-$fc-base: #9327f8;
-$bg-white: #fff;
-$bg-base: #9c00ff;
+$fc-base: #000000;
+$bg-gray: #ECEAEA;
+$bg-base: #AFDCE1;
+$bg-black: #000000;
+$bg-white: #ffffff;
+$btn-border: #000000;
 
 // コンテンツサイズ
 $wd-content-pc: 1170px;

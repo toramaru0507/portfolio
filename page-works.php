@@ -9,8 +9,8 @@ Template Name: workページ
 <!-- fv -->
 <header class="fv-sub">
     <div class="container">
-        <h2 class="ttl">Toraji Corporation</h2>
-        <img src="<?php echo get_template_directory_uri();?>/img/mylogo.svg" alt="">
+        <h2 class="heading__title">Toraji Corporation</h2>
+        <img src="<?php echo get_template_directory_uri();?>/dist/img/mylogo.svg" alt="">
     </div>
 </header>
 <?php breadcrumb(); ?>
@@ -28,8 +28,8 @@ Template Name: workページ
     ?>
     <section class="area_page_works_home">
         <div class="container">
-            <div class="head_home fade-in">
-                <h2 class="ttl">Works</h2>
+            <div class="heading fade-in">
+                <h2 class="heading__title">Works</h2>
                 <br>
                 <p>これまでの実績を最新のサイトから順にまとめさせていただきました。</p>
                 <p>クリックで詳細をご覧いただけます。</p>

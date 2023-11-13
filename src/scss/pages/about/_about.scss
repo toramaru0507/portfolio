@@ -10,29 +10,6 @@
         padding: 40px;
         position: relative;
       }
-
-      .img::before {
-        content: "";
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 150px;
-        height: 150px;
-        background-color: #00ced1;
-        z-index: -1;
-      }
-
-      .img::after {
-        content: "";
-        position: absolute;
-        top: 150px;
-        left: 150px;
-        width: 190px;
-        height: 190px;
-        background-color: #afeeee;
-        z-index: -1;
-      }
-
     }
   }
 }
@@ -61,7 +38,7 @@
         }
 
         .text_home {
-          .text_home_ttl {
+          .heading-sub {
             width: 100%;
           }
         }

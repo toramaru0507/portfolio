@@ -1,18 +1,21 @@
 @import 'mixin';
 @import 'variables';
-@import 'layouts';
 @import 'common';
+@import 'layouts';
 @import 'utility';
 
 //layouts
 @import './layouts/_header.scss';
 @import './layouts/_footer.scss';
+@import './layouts/_inner.scss';
 
 //components
 @import './components/_btn.scss';
 @import './components/_fadeIn.scss';
 @import './components/_breadcrumb.scss';
 @import './components/_fv-sub.scss';
+@import './components/_heading.scss';
+@import './components/_card.scss';
 
 //pages
 @import './pages/top/_fv.scss';
