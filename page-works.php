@@ -8,8 +8,8 @@ Template Name: workページ
 <?php get_template_part('content', 'menu'); ?>
 <!-- fv -->
 <header class="fv-sub">
-    <div class="container">
-        <h2 class="heading__title">Toraji Corporation</h2>
+    <div class="fv-sub__inner">
+        <h2 class="fv-sub__title">Tora Code</h2>
         <img src="<?php echo get_template_directory_uri();?>/dist/img/mylogo.svg" alt="">
     </div>
 </header>
@@ -22,38 +22,36 @@ Template Name: workページ
         $args = array(
             'post_type' => 'post',
             'category_name' => 'works',
-            'posts_per_page' => 9,
+            'posts_per_page' => 12,
         );
         $event_query = new WP_Query ($args);
     ?>
-    <section class="area_page_works_home">
-        <div class="container">
-            <div class="heading fade-in">
-                <h2 class="heading__title">Works</h2>
-                <br>
-                <p>これまでの実績を最新のサイトから順にまとめさせていただきました。</p>
-                <p>クリックで詳細をご覧いただけます。</p>
-            </div>
-            <!-- ループ処理 -->
-            <div class="text_home_loop">
-                <?php if ( $event_query->have_posts() ): ?>
-                    <?php while ( $event_query->have_posts()) : $event_query->the_post() ; ?>
-                    <div class="body_home fade-in">
-                        <div class="img" >
-                            <?php if ( has_post_thumbnail() ) : ?>
-                                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                <?php the_post_thumbnail(); ?>
-                                </a>
-                            <?php endif; ?>
-                        </div>
-                        <div class="text_home">
-                            <h3 class="text_home_ttl"><?php the_title(); ?></h3>
-                        </div>
-                    </div>
-                    <?php endwhile; ?>
-                    <?php wp_reset_postdata(); ?>
-                <?php endif; ?>
-            </div>
+    <section class="works">
+      <div class="works__inner inner">
+        <div class="heading">
+          <h2 class="heading__title fade-in">Works</h2>
         </div>
+        <p class="works__text fade-in">これまでの実績を最新順にまとめさせていただきました。<br>クリックで詳細をご覧いただけます。</p>
+        <!-- ループ処理 -->
+        <div class="works__loop fade-in">
+          <?php if ($event_query->have_posts()) : ?>
+            <?php while ($event_query->have_posts()) : $event_query->the_post(); ?>
+              <div class="card-work">
+                <div class="card__img">
+                  <?php if (has_post_thumbnail()) : ?>
+                    <a class="card__link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                      <?php the_post_thumbnail(); ?>
+                    </a>
+                  <?php endif; ?>
+                </div>
+                <div class="card__head">
+                  <h3 class="heading-sub"><?php the_title(); ?></h3>
+                </div>
+              </div>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
+        </div>
+      </div>
     </section>
 <?php get_footer(); ?>

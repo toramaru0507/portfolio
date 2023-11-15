@@ -37,8 +37,8 @@ Template Name: トップページ
           <p>・Web制作フリーランスとして、コーディング、WP構築をメインに活動中。</p>
           <p>2023年2月~9月</p>
           <p>・システム開発に携わる。</p>
-          <div class="btn">
-            <a class="btn_edge" href="<?php echo esc_url(home_url()); ?>/about/">詳しく見る</a>
+          <div class="button">
+            <a class="button_edge" href="<?php echo esc_url(home_url()); ?>/about/">詳しく見る</a>
           </div>
         </div>
       </div>
@@ -59,12 +59,12 @@ Template Name: トップページ
       <div class="heading">
         <h2 class="heading__title fade-in">Works</h2>
       </div>
-      <p class="works__text">これまでの実績を最新順にまとめさせていただきました。</p>
+      <p class="works__text fade-in">これまでの実績を最新順にまとめさせていただきました。</p>
       <!-- ループ処理 -->
       <div class="works__loop fade-in">
         <?php if ($event_query->have_posts()) : ?>
           <?php while ($event_query->have_posts()) : $event_query->the_post(); ?>
-            <div class="card">
+            <div class="card-work">
               <div class="card__img">
                 <?php if (has_post_thumbnail()) : ?>
                   <a class="card__link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
@@ -80,12 +80,12 @@ Template Name: トップページ
           <?php wp_reset_postdata(); ?>
         <?php endif; ?>
       </div>
-      <div class="btn">
-        <a class="btn_edge" href="<?php echo esc_url(home_url()); ?>/works/">詳しく見る</a>
+      <div class="button">
+        <a class="button_edge" href="<?php echo esc_url(home_url()); ?>/works/">詳しく見る</a>
       </div>
     </div>
   </section>
-  
+
   <!-- service -->
   <section class="service">
     <div class="service__inner inner">
@@ -129,8 +129,8 @@ Template Name: トップページ
           </div>
         </div>
       </div>
-      <div class="btn">
-        <a class="btn_edge" href="<?php echo esc_url(home_url()); ?>/service/">詳細を見る</a>
+      <div class="button">
+        <a class="button_edge" href="<?php echo esc_url(home_url()); ?>/service/">詳細を見る</a>
       </div>
     </div>
   </section>

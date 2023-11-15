@@ -303,7 +303,7 @@ img {
   }
 }
 
-.btn_edge {
+.button_edge {
   position: relative;
   display: flex;
   justify-content: center;
@@ -319,7 +319,7 @@ img {
   color: #000;
   transition: 0.4s;
 }
-.btn_edge:hover {
+.button_edge:hover {
   color: #FFF;
   background-color: #000000;
 }
@@ -441,11 +441,11 @@ img {
   background-color: #AFDCE1;
 }
 
-.card {
+.card-work {
   margin-bottom: 25px;
 }
 @media screen and (max-width: 1366px) {
-  .card {
+  .card-work {
     width: 100%;
     text-align: center;
     margin-bottom: 40px;
@@ -454,28 +454,29 @@ img {
   }
 }
 @media screen and (max-width: 768px) {
-  .card {
+  .card-work {
     width: 100%;
     text-align: center;
     margin-bottom: 40px;
   }
 }
-.card .card__img img {
+.card-work .card__img img {
   max-width: 350px;
-  height: 100%;
+  height: 220px;
+  object-fit: cover;
   border-radius: 10px;
 }
 @media screen and (max-width: 1366px) {
-  .card .card__img img {
+  .card-work .card__img img {
     max-width: 500px;
   }
 }
 @media screen and (max-width: 768px) {
-  .card .card__img img {
+  .card-work .card__img img {
     width: 100%;
   }
 }
-.card .card__img a::before {
+.card-work .card__img a::before {
   content: "";
   position: absolute;
   background-color: rgba(92, 185, 197, 0.8);
@@ -485,20 +486,22 @@ img {
   height: 100%;
   opacity: 0;
   text-align: center;
+  border-radius: 10px;
   transition: all 0.3s;
 }
-.card .card__img a:hover::before {
+.card-work .card__img a:hover::before {
   opacity: 1;
 }
-.card .card__img a:hover {
+.card-work .card__img a:hover {
   background-color: #FFF;
+  border-radius: 10px;
 }
 @media screen and (max-width: 1366px) {
-  .card .card__link {
+  .card-work .card__link {
     width: 100%;
   }
 }
-.card .card__head {
+.card-work .card__head {
   padding-top: 20px;
 }
 
@@ -619,15 +622,15 @@ table td {
     margin-top: 33px;
   }
 }
-.about .about__inner .about__body .about__content .btn {
+.about .about__inner .about__body .about__content .button {
   margin-top: auto;
 }
 @media screen and (max-width: 768px) {
-  .about .about__inner .about__body .about__content .btn {
+  .about .about__inner .about__body .about__content .button {
     margin: 25px auto 0;
   }
 }
-.about .about__inner .about__body .about__content .btn_edge {
+.about .about__inner .about__body .about__content .button_edge {
   margin-left: 0;
 }
 
@@ -670,7 +673,7 @@ table td {
 .service .service__inner .service__loop .service__card .service__head .service__text {
   margin-top: 20px;
 }
-.service .service__inner .btn {
+.service .service__inner .button {
   display: block;
   margin: 50px auto 0;
 }
