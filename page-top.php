@@ -87,14 +87,6 @@ Template Name: トップページ
   </section>
   
   <!-- service -->
-  <?php
-  $args = array(
-    'post_type' => 'post',
-    'category_name' => 'service',
-    'posts_per_page' => 3,
-  );
-  $event_query = new WP_Query($args);
-  ?>
   <section class="service">
     <div class="service__inner inner">
       <div class="heading">
