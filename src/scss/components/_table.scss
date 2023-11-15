@@ -1,0 +1,53 @@
+table {
+  width: 100%;
+  tr {
+    border-top: 1px solid black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: inline-block;
+    line-height: 1.8rem;
+    width: 100%;
+
+    &:last-of-type {
+      border-bottom: 1px solid black;
+    }
+
+    @include mq(sp) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  th {
+    width: 25%;
+    border-right: 1px solid black;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: left;
+    font-weight: normal;
+    min-width: 230px;
+    font-size: 1.6rem;
+    line-height: 1.8;
+
+    @include mq(sp) {
+      width: 100%;
+      max-width: 100%;
+      border-right: 0px;
+      padding-top: 0px;
+    }
+  }
+
+  td {
+    padding-left: 50px;
+    vertical-align: middle;
+    width: 75%;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    @include mq(sp) {
+      width: 100%;
+      padding-left: 0px;
+      width: 100%;
+    }
+
+  }
+}
