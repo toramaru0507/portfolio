@@ -1,31 +1,52 @@
-.area_skill_home {
-  width: 80%;
-  margin: 0 auto;
+.skill {
 
-  .container {
-    .text_home_loop {
+  .skill__inner {
+    .skill__loop {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
       width: 100%;
-      text-align: center;
+      text-align: left;
 
-      .body_home {
-        width: 33%;
-        margin: 30px 0;
+      @include mq(tab) {
+        max-width: 500px;
+        margin: 0 auto;
       }
-    }
 
-  }
-}
+      @include mq(sp) {
+        flex-direction: column;
+        margin: 0 auto;
+      }
 
-@include mq(sp) {
-  .area_skill_home {
-    .container {
-      .text_home_loop {
-        .body_home {
-          width: 50%;
+      .skill__card {
+        display: flex;
+        margin: 30px 0;
+        width: 48%;
+
+        @include mq(sp) {
+          width: 100%;
+        }
+      }
+
+      .skill__img {
+        width: 100px;
+        margin-right: 20px;
+      }
+
+      .skill__title {
+        font-size: 24px;
+
+        @include mq(sp) {
+          font-size: 20px;
+        }
+      }
+
+      .skill__text {
+        @include mq(sp) {
+          width: 64%;
         }
       }
     }
+
   }
 }

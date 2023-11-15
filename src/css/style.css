@@ -343,46 +343,57 @@ img {
     transform: translate(0);
   }
 }
-.pankuzu {
-  padding: 30px 0 0 120px;
+.breadcrumb {
+  width: 1200px;
+  margin: 20px auto;
   list-style: none;
 }
-.pankuzu li {
+.breadcrumb li {
   display: inline;
+  font-family: "Noto Sans JP";
+  font-size: 1.6rem;
 }
-.pankuzu li a {
+.breadcrumb li a {
   color: inherit;
   text-decoration: none;
 }
-.pankuzu li a:hover {
+.breadcrumb li a:hover {
   color: #AFDCE1;
 }
-.pankuzu li + li:before {
+.breadcrumb li + li:before {
   content: "＞";
   margin-right: 0.3em;
+  margin-left: 0.3em;
 }
 
-@media screen and (max-width: 768px) {
-  .pankuzu {
-    padding: 20px 0 0 20px;
+@media screen and (max-width: 1366px) {
+  .breadcrumb {
+    width: 100%;
+    padding: 0 20px;
   }
 }
 .fv-sub {
   width: 100%;
 }
-.fv-sub .container {
-  height: 350px;
+.fv-sub .fv-sub__inner {
+  height: 300px;
   background-color: #AFDCE1;
+  padding: 72px 0 0 120px;
 }
-.fv-sub .container .ttl {
-  padding-top: 150px;
-  font-size: 20px;
-  font-style: oblique;
-  margin: 0 0 0 100px;
+@media screen and (max-width: 768px) {
+  .fv-sub .fv-sub__inner {
+    text-align: center;
+    padding: 72px 0 0 0;
+  }
 }
-.fv-sub .container img {
+.fv-sub .fv-sub__inner .fv-sub__title {
+  font-family: "Damion", cursive;
+  font-size: 40px;
+  padding-left: 30px;
+  line-height: 1.5;
+}
+.fv-sub .fv-sub__inner img {
   width: 200px;
-  margin: 0 0 0 100px;
 }
 
 .heading {
@@ -606,8 +617,8 @@ img {
   margin-top: 20px;
 }
 .service .service__inner .btn {
-  margin-top: 50px;
-  text-align: center;
+  display: block;
+  margin: 50px auto 0;
 }
 
 .works {
@@ -792,61 +803,102 @@ img {
     width: 300px;
   }
 }
-.area_page_about_home {
-  width: 80%;
-  margin: 0 auto;
+.about-detail {
+  background-color: #ECEAEA;
 }
-.area_page_about_home .container .body_home {
+.about-detail .about-detail__inner .about-detail__body {
   display: flex;
+  justify-content: space-between;
 }
-.area_page_about_home .container .body_home .img {
-  padding: 40px;
+@media screen and (max-width: 1366px) {
+  .about-detail .about-detail__inner .about-detail__body {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-detail .about-detail__inner .about-detail__body {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+}
+.about-detail .about-detail__inner .about-detail__body .about-detail__content {
+  width: 63%;
+}
+@media screen and (max-width: 768px) {
+  .about-detail .about-detail__inner .about-detail__body .about-detail__content {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+.about-detail .about-detail__inner .about-detail__body .about-detail__img {
+  width: 33%;
   position: relative;
 }
-
 @media screen and (max-width: 768px) {
-  .area_page_about_home .container .body_home {
-    width: 100%;
-    display: block;
-  }
-  .area_page_about_home .container .body_home .img {
+  .about-detail .about-detail__inner .about-detail__body .about-detail__img {
     width: 100%;
     padding: 0px;
     margin-top: 20px;
   }
-  .area_page_about_home .container .body_home .img img {
+  .about-detail .about-detail__inner .about-detail__body .about-detail__img img {
     width: 100%;
-    height: 300px;
+    height: auto;
   }
-  .area_page_about_home .container .body_home .img::after {
+  .about-detail .about-detail__inner .about-detail__body .about-detail__img::after {
     top: 20px;
     left: 20px;
   }
-  .area_page_about_home .container .body_home .text_home .heading-sub {
+}
+
+.skill .skill__inner .skill__loop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+}
+@media screen and (max-width: 1366px) {
+  .skill .skill__inner .skill__loop {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__inner .skill__loop {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+.skill .skill__inner .skill__loop .skill__card {
+  display: flex;
+  margin: 30px 0;
+  width: 48%;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__inner .skill__loop .skill__card {
     width: 100%;
   }
 }
-.area_skill_home {
-  width: 80%;
-  margin: 0 auto;
+.skill .skill__inner .skill__loop .skill__img {
+  width: 100px;
+  margin-right: 20px;
 }
-.area_skill_home .container .text_home_loop {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  text-align: center;
+.skill .skill__inner .skill__loop .skill__title {
+  font-size: 24px;
 }
-.area_skill_home .container .text_home_loop .body_home {
-  width: 33%;
-  margin: 30px 0;
-}
-
 @media screen and (max-width: 768px) {
-  .area_skill_home .container .text_home_loop .body_home {
-    width: 50%;
+  .skill .skill__inner .skill__loop .skill__title {
+    font-size: 20px;
   }
 }
-.area_flow_home .container .body_home {
+@media screen and (max-width: 768px) {
+  .skill .skill__inner .skill__loop .skill__text {
+    width: 64%;
+  }
+}
+
+.flow .container .body_home {
   padding: 0 150px 30px 150px;
 }
 

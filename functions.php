@@ -65,8 +65,8 @@ add_filter( 'widget_text', 'widget_text_exec_php', 99 );
 // パンくずリスト
 function breadcrumb() {
     $home = '<li><a href="'.get_bloginfo('url').'" >TOP</a></li>';
-  
-    echo '<ul class="pankuzu">';
+
+    echo '<ul class="breadcrumb">';
     if ( is_front_page() ) {
         // トップページの場合
     }
@@ -76,7 +76,7 @@ function breadcrumb() {
     echo $home,$cat;
     the_title('<li>', '</li>');
     }
-    
+
     else if( is_page() ) {
     // 固定ページの場合
     echo $home;
