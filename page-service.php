@@ -60,8 +60,8 @@ Template Name: serviceページ
             </div>
           </div>
         </div>
-        <div class="btn">
-          <a class="btn_edge" href="<?php echo esc_url(home_url()); ?>/service/">詳細を見る</a>
+        <div class="button">
+          <a class="button_edge" href="<?php echo esc_url(home_url()); ?>/service/">詳細を見る</a>
         </div>
       </div>
     </section>
