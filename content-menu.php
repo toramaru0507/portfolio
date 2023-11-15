@@ -54,3 +54,4 @@
       <?php endforeach; ?>
     </ul>
   </nav>
+</header>
