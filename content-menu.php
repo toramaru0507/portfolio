@@ -35,7 +35,7 @@
     <span class="bar bar_mid"></span>
     <span class="bar bar_bottom"></span>
   </span>
-  <span class="burger-musk"></span>
+  <!-- <span class="burger-musk"></span> -->
   <nav class="nav_header">
     <?php
     // メニューIDの取得 

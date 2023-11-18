@@ -6,6 +6,10 @@
   align-items: center;
   margin: 0 auto;
   text-decoration: none;
+  max-width: 213px;
+  background: linear-gradient(to left, transparent 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
   width: 213px;
   height: 57px;
   font-size: 1.8rem;
@@ -13,10 +17,12 @@
   background-color: $bg-white;
   border-radius: 10px;
   color: #000;
-  transition: .4s;
+  transition: all 1s ease;
 
   &:hover {
     color: #FFF;
-    background-color: $fc-base;
+    background-position: left bottom;
+    width: 100%;
+    transition: all 1s ease;
   }
 }

@@ -14,20 +14,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $(function() {
-      $(window).scroll(function() {
-        const wHeight = $(window).height();
-        const scrollAmount = $(window).scrollTop();
-        $('.fade-in').each(function() {
-          const targetPosition = $(this).offset().top;
-          if (scrollAmount > targetPosition - wHeight + 60) {
-            $(this).addClass("fadeInDown downup");
-          }
-        });
-      });
-    });
-  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCR8CXXQVR"></script>
   <script>

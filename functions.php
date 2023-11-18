@@ -1,13 +1,13 @@
 <?php
-//js読み込み
-function add_my_scripts() {
-  wp_enqueue_script( 
-    'main-script', 
-    get_theme_file_uri( 'js/main.js' ), 
-    array( 'jquery' )
-  );
-}
-add_action('wp_enqueue_scripts', 'add_my_scripts');
+// //js読み込み
+// function add_my_scripts() {
+//   wp_enqueue_script( 
+//     'main-script', 
+//     get_theme_file_uri( 'js/script.js' ), 
+//     array( 'jquery' )
+//   );
+// }
+// add_action('wp_enqueue_scripts', 'add_my_scripts');
 
 
 //add_action('wp_footer', 'add_my_scripts');
@@ -42,8 +42,11 @@ function add_file_types_to_uploads($file_types){
 add_action('upload_mimes', 'add_file_types_to_uploads');
 
 //アイキャッチ画像
-add_theme_support('post-thumbnails');
+add_action('init', function () {
 
+  add_theme_support('post-thumbnails');
+
+});
 //続きを読むに変更
 function tuzuki_excerpt_more($post) {
 	return '<a href="'. get_permalink($post->ID) . '">' . '続きを読む' . '</a>';
@@ -89,7 +92,7 @@ function breadcrumb() {
     }
     echo "</ul>";
 }
- 
+
 // アーカイブの余計なタイトルを削除
 add_filter( 'get_the_archive_title', function ($title) {
     if ( is_category() ) {
@@ -103,24 +106,22 @@ add_filter( 'get_the_archive_title', function ($title) {
 });
 
 
-function register_css()
-{ // 管理画面でないなら
-  if (!is_admin()) {
-    wp_enqueue_style('AOS',  get_template_directory_uri() .  '/css/aos.css');
-    }
-}
+// function register_css()
+// { // 管理画面でないなら
+//   if (!is_admin()) {
+//     wp_enqueue_style('AOS',  get_template_directory_uri() . '/css/aos.css');
+//     }
+// }
 
-// 登録済みのjQueryを解除して、登録し直す
-function remove_default_jquery()
-{
-  // 管理画面でないなら
-  if (!is_admin()) {
-    wp_enqueue_script('AOS', get_template_directory_uri() . '/js/aos.js', array(), 1.0, true);
-    }
-}
-
-
-?>
+// // 登録済みのjQueryを解除して、登録し直す
+// function remove_default_jquery()
+// {
+//   // 管理画面でないなら
+//   if (!is_admin()) {
+//     wp_enqueue_script('AOS', get_template_directory_uri() . '/js/aos.js', array(), 1.0, true);
+//     }
+// }
+// ?>
 
 
 

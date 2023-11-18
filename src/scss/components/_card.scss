@@ -1,5 +1,10 @@
 .card-work {
-  margin-bottom: 25px;
+	width: calc(33.33333333% - 50px);
+  margin: 0 50px 25px 0;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 
   @include mq(tab) {
     width: 100%;

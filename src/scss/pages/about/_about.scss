@@ -29,6 +29,10 @@
         width: 33%;
         position: relative;
 
+        img {
+          border-radius: 10px;
+        }
+
         @include mq(sp) {
           width: 100%;
           padding: 0px;

@@ -1,13 +1,4 @@
 @charset "UTF-8";
-/* noto-sans-jp-700 - japanese */
-/* noto-sans-jp-regular - japanese */
-@font-face {
-  font-family: "Noto Sans JP";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local(""), url("../fonts/NotoSansCJKjp-Regular.woff2") format("woff2"), url("../fonts/NotoSansCJKjp-Regular.ttf") format("truetype");
-}
 /* noto-sans-jp-500 - japanese */
 @font-face {
   font-family: "Noto Sans JP";
@@ -56,6 +47,7 @@ a {
 }
 a:hover {
   color: #AFDCE1;
+  transition: 0.3s;
 }
 
 h2 {
@@ -124,6 +116,7 @@ img {
   background-color: #ECEAEA;
   padding: 0 55px;
   position: fixed;
+  top: 0;
   z-index: 999;
 }
 @media screen and (max-width: 768px) {
@@ -147,7 +140,8 @@ img {
 .header .header__inner .top-nav ul li {
   font-family: "Damion", cursive;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 1.1;
   float: left;
   padding: 0 40px 0 0;
 }
@@ -170,7 +164,7 @@ img {
   transform-origin: right top;
   transition: transform 0.3s;
 }
-.header .header__inner .nav_header {
+.header .nav_header {
   display: none;
 }
 
@@ -215,38 +209,41 @@ img {
     transform: translateY(-2px) rotate(-30deg);
     transition: transform 0.3s;
   }
-  .header .burger-musk {
-    display: none;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #ECEAEA;
-    z-index: 1;
-  }
   .header .nav_header {
-    width: 100%;
     position: fixed;
     display: block;
+    width: 100%;
+    height: 0;
+    top: 0;
     opacity: 0;
-    z-index: 2;
-    margin-top: 100px;
+    overflow: hidden;
     text-align: center;
+    padding-top: 0;
+    background-color: #ECEAEA;
+    z-index: 2;
   }
   .header .nav_header .list_nav_header {
     display: block;
   }
   .header .nav_header .list_nav_header .nav-item {
     margin-top: 30px;
+    opacity: 0;
+    font-family: "Damion", cursive;
   }
   .header .nav_header .list_nav_header .nav-item a {
-    font-size: 20px;
+    font-size: 2rem;
   }
   .header .nav_header.open {
     opacity: 1;
+    height: 100%;
+    padding-top: 90px;
+    overflow: visible;
     transition: transform 0.3s, opacity 0.3s;
-    font-size: 20px;
+    font-size: 2rem;
+  }
+  .header .nav_header.open .nav-item {
+    opacity: 1;
+    transition: transform 0.3s, opacity 0.3s;
   }
 }
 .fotter {
@@ -310,6 +307,10 @@ img {
   align-items: center;
   margin: 0 auto;
   text-decoration: none;
+  max-width: 213px;
+  background: linear-gradient(to left, transparent 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
   width: 213px;
   height: 57px;
   font-size: 1.8rem;
@@ -317,11 +318,13 @@ img {
   background-color: #ffffff;
   border-radius: 10px;
   color: #000;
-  transition: 0.4s;
+  transition: all 1s ease;
 }
 .button_edge:hover {
   color: #FFF;
-  background-color: #000000;
+  background-position: left bottom;
+  width: 100%;
+  transition: all 1s ease;
 }
 
 .fade-in {
@@ -337,6 +340,7 @@ img {
 @keyframes fadeInDown {
   0% {
     opacity: 0;
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
@@ -359,6 +363,7 @@ img {
 }
 .breadcrumb li a:hover {
   color: #AFDCE1;
+  transition: 0.3s;
 }
 .breadcrumb li + li:before {
   content: "＞";
@@ -379,11 +384,13 @@ img {
   height: 300px;
   background-color: #AFDCE1;
   padding: 72px 0 0 120px;
+  margin-top: 100px;
 }
 @media screen and (max-width: 768px) {
   .fv-sub .fv-sub__inner {
     text-align: center;
     padding: 72px 0 0 0;
+    margin-top: 60px;
   }
 }
 .fv-sub .fv-sub__inner .fv-sub__title {
@@ -442,7 +449,11 @@ img {
 }
 
 .card-work {
-  margin-bottom: 25px;
+  width: calc(33.33333333% - 50px);
+  margin: 0 50px 25px 0;
+}
+.card-work:nth-child(3n) {
+  margin-right: 0;
 }
 @media screen and (max-width: 1366px) {
   .card-work {
@@ -557,6 +568,49 @@ table td {
     padding-left: 0px;
     width: 100%;
   }
+}
+
+.pagenation {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.pagenation .prev, .pagenation .next {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .pagenation {
+    margin-top: 40px;
+  }
+}
+
+.page-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #AFDCE1;
+  font-size: 1.8rem;
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  transition: 0.4s;
+}
+.page-numbers:hover {
+  opacity: 0.7;
+}
+@media screen and (max-width: 768px) {
+  .page-numbers {
+    font-size: 1.2rem;
+    width: 50px;
+    height: 50px;
+  }
+}
+.page-numbers.current {
+  background-color: #AFDCE1;
+  color: #fff;
+}
+.page-numbers.current:hover {
+  opacity: 1;
 }
 
 .fv {
@@ -692,7 +746,6 @@ table td {
 .works .works__inner .works__loop {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 @media screen and (max-width: 1366px) {
   .works .works__inner .works__loop {
@@ -709,6 +762,11 @@ table td {
 }
 .contact {
   background-color: #ECEAEA;
+}
+@media screen and (max-width: 768px) {
+  .contact .breadcrumb {
+    padding-top: 70px;
+  }
 }
 .contact .contact_inner .contact7__privacy {
   text-align: center;
@@ -842,11 +900,14 @@ table td {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  max-width: 145px;
   width: 145px;
   height: 57px;
   font-size: 1.8rem;
   border: solid 2px #000000;
-  background-color: #ffffff;
+  background: linear-gradient(to left, transparent 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
   border-radius: 10px;
   color: #000;
   transition: 0.4s;
@@ -859,8 +920,10 @@ table td {
   }
 }
 .single .single__inner .pagenation a:hover {
+  max-width: 145px;
   color: #FFF;
-  background-color: #000000;
+  background-position: left bottom;
+  transition: all 1s ease;
 }
 
 .about-detail {
@@ -894,6 +957,9 @@ table td {
 .about-detail .about-detail__inner .about-detail__body .about-detail__img {
   width: 33%;
   position: relative;
+}
+.about-detail .about-detail__inner .about-detail__body .about-detail__img img {
+  border-radius: 10px;
 }
 @media screen and (max-width: 768px) {
   .about-detail .about-detail__inner .about-detail__body .about-detail__img {
@@ -951,6 +1017,9 @@ table td {
   .skill .skill__inner .skill__loop .skill__title {
     font-size: 20px;
   }
+}
+.skill .skill__inner .skill__loop .skill__text {
+  flex: 1;
 }
 @media screen and (max-width: 768px) {
   .skill .skill__inner .skill__loop .skill__text {

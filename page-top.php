@@ -80,7 +80,7 @@ Template Name: トップページ
           <?php wp_reset_postdata(); ?>
         <?php endif; ?>
       </div>
-      <div class="button">
+      <div class="button fade-in">
         <a class="button_edge" href="<?php echo esc_url(home_url()); ?>/works/">詳しく見る</a>
       </div>
     </div>
@@ -92,7 +92,7 @@ Template Name: トップページ
       <div class="heading">
         <h2 class="heading__title fade-in">Service</h2>
       </div>
-      <div class="service__loop">
+      <div class="service__loop fade-in">
         <div class="service__card">
           <div class="service__img">
             <img src="<?php echo get_template_directory_uri(); ?>/dist/img/coding.png" alt="">
@@ -129,7 +129,7 @@ Template Name: トップページ
           </div>
         </div>
       </div>
-      <div class="button">
+      <div class="button fade-in">
         <a class="button_edge" href="<?php echo esc_url(home_url()); ?>/service/">詳細を見る</a>
       </div>
     </div>

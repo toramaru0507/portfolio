@@ -42,11 +42,14 @@
         justify-content: center;
         align-items: center;
         text-decoration: none;
+        max-width: 145px;
         width: 145px;
         height: 57px;
         font-size: 1.8rem;
         border: solid 2px $btn-border;
-        background-color: $bg-white;
+        background: linear-gradient(to left, transparent 50%, black 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
         border-radius: 10px;
         color: #000;
         transition: .4s;
@@ -58,8 +61,10 @@
         }
 
         &:hover {
+          max-width: 145px;
           color: #FFF;
-          background-color: $fc-base;
+          background-position: left bottom;
+          transition: all 1s ease;
         }
 
         // .prev,
