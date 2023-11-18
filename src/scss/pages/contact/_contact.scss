@@ -2,6 +2,12 @@
 .contact {
   background-color: $bg-gray;
 
+  .breadcrumb {
+    @include mq(sp) {
+      padding-top: 70px;
+    }
+  }
+
   .contact_inner {
 
     .contact7__privacy {

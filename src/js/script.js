@@ -17,3 +17,14 @@ $('a[href^="#"]').click(function() {
 $(window).on('scroll', function () {
   $('.ttl').fadeIn(3000);
 });
+
+$(window).scroll(function() {
+  const wHeight = $(window).height();
+  const scrollAmount = $(window).scrollTop();
+  $('.fade-in').each(function() {
+    const targetPosition = $(this).offset().top;
+    if (scrollAmount > targetPosition - wHeight) {
+      $(this).addClass("fadeInDown downup");
+    }
+  });
+});

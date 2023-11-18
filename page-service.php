@@ -23,7 +23,7 @@ Template Name: serviceページ
         <div class="heading">
           <h2 class="heading__title fade-in">Service</h2>
         </div>
-        <div class="service__loop">
+        <div class="service__loop fade-in">
           <div class="service__card">
             <div class="service__img">
               <img src="<?php echo get_template_directory_uri(); ?>/dist/img/coding.png" alt="">
@@ -60,7 +60,7 @@ Template Name: serviceページ
             </div>
           </div>
         </div>
-        <div class="button">
+        <div class="button fade-in">
           <a class="button_edge" href="<?php echo esc_url(home_url()); ?>/service/">詳細を見る</a>
         </div>
       </div>
@@ -72,37 +72,18 @@ Template Name: serviceページ
         <div class="heading">
           <h2 class="heading__title fade-in">Price</h2>
         </div>
-        <p class="price__text">下記はおおよその価格になります。※金額に関しての相談は可能です。</p>
-        <table>
+        <p class="price__text fade-in">下記はおおよその価格になります。※金額に関しての相談は可能です。</p>
+        <table class="fade-in">
           <tbody>
+            <?php
+                    $price = SCF::get('price');
+                    foreach ($price as $fields) {
+            ?>
             <tr>
-              <th>LPコーディング</th>
-              <td>50000円〜</td>
+              <th><?php echo $fields['title']; ?></th>
+              <td><?php echo $fields['fee']; ?></td>
             </tr>
-            <tr>
-              <th>トップページ</th>
-              <td>50000円〜</td>
-            </tr>
-            <tr>
-              <th>下層ページ</th>
-              <td>7000円〜</td>
-            </tr>
-            <tr>
-              <th>流し込みページ</th>
-              <td>5000円〜</td>
-            </tr>
-            <tr>
-              <th>JSなどによるカスタマイズ</th>
-              <td>10000円〜</td>
-            </tr>
-            <tr>
-              <th>WordPress構築</th>
-              <td>100000円〜</td>
-            </tr>
-            <tr>
-              <th>サイト改修</th>
-              <td>50000円〜</td>
-            </tr>
+            <?php } ?>
           </tbody>
         </table>
       </div>

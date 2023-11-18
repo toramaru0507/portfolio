@@ -15,7 +15,7 @@
   \**************************/
 /***/ (function() {
 
-eval("// レスポンシブ時\n\n// ハンバーメニュークリック時のクラス付与\n$('.nav_toggle').on('click', function () {\n    $('.bar').toggleClass('show');\n    $('.nav_header').toggleClass('open');\n    $('.burger-musk').fadeToggle(300);\n  });\n\n// リンククリック時のクラス削除\n$('a[href^=\"#\"]').click(function() {\n    $('.bar').removeClass('show');\n    $('.nav_header').removeClass('open');\n    $('.burger-musk').fadeToggle(0);\n});\n\n$(window).on('scroll', function () {\n  $('.ttl').fadeIn(3000);\n});\n\n\n//# sourceURL=webpack://toraji/./src/js/script.js?");
+eval("// レスポンシブ時\n\n// ハンバーメニュークリック時のクラス付与\n$('.nav_toggle').on('click', function () {\n    $('.bar').toggleClass('show');\n    $('.nav_header').toggleClass('open');\n    $('.burger-musk').fadeToggle(300);\n  });\n\n// リンククリック時のクラス削除\n$('a[href^=\"#\"]').click(function() {\n    $('.bar').removeClass('show');\n    $('.nav_header').removeClass('open');\n    $('.burger-musk').fadeToggle(0);\n});\n\n$(window).on('scroll', function () {\n  $('.ttl').fadeIn(3000);\n});\n\n$(window).scroll(function() {\n  const wHeight = $(window).height();\n  const scrollAmount = $(window).scrollTop();\n  $('.fade-in').each(function() {\n    const targetPosition = $(this).offset().top;\n    if (scrollAmount > targetPosition - wHeight) {\n      $(this).addClass(\"fadeInDown downup\");\n    }\n  });\n});\n\n//# sourceURL=webpack://toraji/./src/js/script.js?");
 
 /***/ })
 

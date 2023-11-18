@@ -22,10 +22,10 @@ Template Name: serviceページ
   <section id="contact7" class="contact">
   <?php breadcrumb(); ?>
       <div class="contact_inner inner-sm">
-          <div class="heading fade-in">
+          <div class="heading">
               <h2 class="heading__title">Contact</h2>
           </div>
-          <div class="body_home fade-in">
+          <div class="body_home">
               <?php echo do_shortcode('[contact-form-7 id="71" title="コンタクトフォーム 1"]') ?>
           </div>
       </div>

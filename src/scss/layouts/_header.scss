@@ -7,6 +7,7 @@
     background-color: $bg-gray;
     padding: 0 55px;
     position: fixed;
+    top: 0;
     z-index: 999;
 
     @include mq(sp) {
@@ -30,7 +31,8 @@
         li {
           font-family: $font-damion;
           font-weight: 400;
-          font-size: 25px;
+          font-size: 2.5rem;
+          line-height: 1.1;
           float: left;
           padding: 0 40px 0 0;
 
@@ -60,9 +62,9 @@
       }
     }
 
-    .nav_header {
-      display: none;
-    }
+  }
+  .nav_header {
+    display: none;
   }
 }
 
@@ -125,35 +127,41 @@
     }
 
     // click時のmenu背景
-    .burger-musk {
-      display: none;
-      height: 100vh;
-      width: 100vw;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: $bg-gray;
-      z-index: 1;
-    }
+    // .burger-musk {
+    //   display: none;
+    //   height: 100vh;
+    //   width: 100vw;
+    //   position: fixed;
+    //   top: 0;
+    //   left: 0;
+    //   background-color: $bg-gray;
+    //   z-index: 1;
+    // }
 
     // menuの位置
     .nav_header {
-      width: 100%;
       position: fixed;
       display: block;
+      width: 100%;
+      height: 0;
+      top: 0;
       opacity: 0;
-      z-index: 2;
-      margin-top: 100px;
+      overflow: hidden;
       text-align: center;
+      padding-top: 0;
+      background-color: $bg-gray;
+      z-index: 2;
 
       .list_nav_header {
         display: block;
 
         .nav-item {
           margin-top: 30px;
+          opacity: 0;
+          font-family: $font-damion;
 
           a {
-            font-size: 20px;
+            font-size: 2rem;
           }
         }
       }
@@ -161,8 +169,16 @@
 
     .nav_header.open {
       opacity: 1;
+      height: 100%;
+      padding-top: 90px;
+      overflow: visible;
       transition: transform .3s, opacity .3s;
-      font-size: 20px;
+      font-size: 2rem;
+
+      .nav-item {
+        opacity: 1;
+        transition: transform .3s, opacity .3s;
+      }
     }
   }
 }

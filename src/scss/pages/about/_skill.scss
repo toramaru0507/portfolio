@@ -42,6 +42,7 @@
       }
 
       .skill__text {
+        flex: 1;
         @include mq(sp) {
           width: 64%;
         }

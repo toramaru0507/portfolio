@@ -21,10 +21,12 @@ Template Name: workページ
     <?php
         $args = array(
             'post_type' => 'post',
+            'paged' => $paged,
             'category_name' => 'works',
-            'posts_per_page' => 12,
+            // 'posts_per_page' => 12,
         );
         $event_query = new WP_Query ($args);
+        $max_num_pages = $loop->max_num_pages;
     ?>
     <section class="works">
       <div class="works__inner inner">
@@ -36,7 +38,7 @@ Template Name: workページ
         <div class="works__loop fade-in">
           <?php if ($event_query->have_posts()) : ?>
             <?php while ($event_query->have_posts()) : $event_query->the_post(); ?>
-              <div class="card-work">
+              <div class="card-work fade-in">
                 <div class="card__img">
                   <?php if (has_post_thumbnail()) : ?>
                     <a class="card__link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
@@ -51,6 +53,18 @@ Template Name: workページ
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
           <?php endif; ?>
+        </div>
+        <div class="pagenation">
+          <?php if ($event_query->max_num_pages > 1) {
+            echo paginate_links(array(
+              'mid_size' => 2,
+              'base' => get_pagenum_link(1) . '%_%',
+              'format' => '?paged=%#%',
+              'current' => max(1, $paged),
+              'total' => $event_query->max_num_pages,
+            ));
+          }
+          ?>
         </div>
       </div>
     </section>
